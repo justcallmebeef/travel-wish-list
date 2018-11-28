@@ -9,8 +9,8 @@ var items = props.data.map(item => {
     return (
         <Fragment>
         <div className="responsive">
-        <div className="gallery">
-            <Link to='/travelprofile'><img src={item.image} alt="Travel Images" width="300" height="200"></img></Link>
+        <div className="gallery" onClick={() => props.getProfile(item.id) }>
+            <Link to={`/travelprofile/${item.country}`}><img src={item.image} alt="Travel Images" width="300" height="200"></img></Link>
             <div className="desc">{item.country}
             <button className="button"><span>Delete</span></button></div>
         </div>
