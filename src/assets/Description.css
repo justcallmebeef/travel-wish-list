@@ -1,0 +1,85 @@
+.headBackground {
+    background-image: url("./robin-inizan-1167675-unsplash.jpg");
+    position: relative;
+      width: 100vw;
+      height: 100vh;
+      padding: 0;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      background-attachment: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      flex-direction: column;
+}
+
+.where {
+    color: #FFF2B4;
+    font-family: 'Homemade Apple', cursive;
+    display: flex;
+    opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+    animation-duration: 7s;
+    margin-right: 5em;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+    }
+	100% {
+		opacity: 1;
+	}
+}
+
+.planning {
+    font-family: 'Homemade Apple', cursive;
+    border-radius: 5px;
+    background-color: #738C96;
+    color: #FFF2B4;
+    display: flex;
+    opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+    animation-duration: 7s;
+    width: 10em;
+    text-decoration: none;
+}
+
+.planning span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .planning span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+    text-decoration: none;
+  }
+  
+  .planning:hover span {
+    padding-right: 25px;
+    text-decoration: none;
+  }
+  
+  .planning:hover span:after {
+    opacity: 1;
+    right: 0;
+    text-decoration: none;
+  }
+
+  .wordButtonContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }

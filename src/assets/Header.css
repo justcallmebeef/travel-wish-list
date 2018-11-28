@@ -1,0 +1,37 @@
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #738C96;
+    font-family: 'Acme', sans-serif;
+    /* position: fixed;
+    top: 0; 
+    width: 100%;  */
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: #FFF2B4;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Homemade Apple', cursive;
+}
+
+ul.topnav li a:hover {background-color: #FDA905;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+}
+
+/* green: #69D376
+red: #D73131
+orange: #FDA905
+cream: #FFF2B4
+grey: #738C96 */
