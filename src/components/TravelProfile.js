@@ -10,8 +10,11 @@ const TravelProfile = (props) => {
         return (
             <Fragment>
             <Header />
-            <div>
-                <p>{items.country}</p>
+            <div className="responsive">
+            <div className="gallery">
+            <img src={items.image} alt="Travel Images" width="300" height="200"></img>
+            <div className="desc">{items.country}</div>
+            </div>
             </div>
             </Fragment>
         )
