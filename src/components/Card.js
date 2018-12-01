@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import '/Users/bethanymitch/block3/travel-fullstack-site/travel-react/src/assets/Card.css'
 import Header from './Header';
+import Form from './Form'; 
 
 const Card = (props) => {
     console.log(props)
@@ -12,7 +13,7 @@ var items = props.data.map(item => {
         <div className="gallery" onClick={() => props.getProfile(item.id) }>
             <Link to={`/travelprofile/${item.country}`}><img src={item.image} alt="Travel Images" width="300" height="200"></img></Link>
             <div className="desc">{item.country}
-            <button className="button"><span>Delete</span></button></div>
+            <button onClick={props.deleteLocation} className="button"><span id={item.id}>Delete</span></button></div>
         </div>
         </div>
         </Fragment>
@@ -23,6 +24,7 @@ var items = props.data.map(item => {
         <Header />
         <div className="container">
             <h1 className="wishList">Travel Wish List:</h1>
+            <Form postLocation={props.postLocation} getCity={props.getCity} getCountry={props.getCountry}/>
             { items }
         </div>
         </Fragment>

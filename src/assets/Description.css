@@ -26,6 +26,10 @@
     margin-right: 5em;
 }
 
+a:link {
+    text-decoration: none;
+}
+
 @keyframes fadeInOpacity {
 	0% {
 		opacity: 0;
