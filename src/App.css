@@ -12,3 +12,231 @@ input[type=text] {
  input[type=text]:focus {
      border: 3px solid #555;
  }
+
+/* Card */
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+.button {
+    border-radius: 5px;
+    background-color: #D73131;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-left: 4em;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.wishList {
+    color: #FDA905;
+    margin-left: .5em;
+    font-family: 'Homemade Apple', cursive;
+}
+
+/* Description  */
+.headBackground {
+    background-image: url("./robin-inizan-1167675-unsplash.jpg");
+    position: relative;
+      width: 100vw;
+      height: 100vh;
+      padding: 0;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      background-attachment: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      flex-direction: column;
+}
+
+.where {
+    color: #FFF2B4;
+    font-family: 'Homemade Apple', cursive;
+    display: flex;
+    opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+    animation-duration: 7s;
+    margin-right: 5em;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+    }
+	100% {
+		opacity: 1;
+	}
+}
+
+.planning {
+    font-family: 'Homemade Apple', cursive;
+    border-radius: 5px;
+    background-color: #738C96;
+    color: #FFF2B4;
+    display: flex;
+    opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+    animation-duration: 7s;
+    width: 10em;
+    text-decoration: none;
+}
+
+.planning span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .planning span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+    text-decoration: none;
+  }
+  
+  .planning:hover span {
+    padding-right: 25px;
+    text-decoration: none;
+  }
+  
+  .planning:hover span:after {
+    opacity: 1;
+    right: 0;
+    text-decoration: none;
+  }
+
+  .wordButtonContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  /* Header */
+
+  ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #738C96;
+    font-family: 'Acme', sans-serif;
+    /* position: fixed;
+    top: 0; 
+    width: 100%;  */
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: #FFF2B4;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Homemade Apple', cursive;
+}
+
+ul.topnav li a:hover {background-color: #FDA905;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+}
+
+/* Form  */
+
+form {
+    width: 50%;
+    margin: 2em;
+}
+
+/* green: #69D376
+red: #D73131
+orange: #FDA905
+cream: #FFF2B4
+grey: #738C96 */
