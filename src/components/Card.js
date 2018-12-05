@@ -4,7 +4,6 @@ import Header from './Header';
 import Form from './Form'; 
 
 const Card = (props) => {
-    console.log(props)
 var items = props.data.map(item => {
     return (
         <Fragment>
@@ -23,7 +22,7 @@ var items = props.data.map(item => {
         <Header />
         <div className="container">
             <h1 className="wishList">Travel Wish List:</h1>
-            <Form postLocation={props.postLocation} getCity={props.getCity} getCountry={props.getCountry}/>
+            <Form getCountryList={props.getCountryList} postLocation={props.postLocation} getCity={props.getCity} getCountry={props.getCountry}/>
             { items }
         </div>
         </Fragment>

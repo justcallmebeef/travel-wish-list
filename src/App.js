@@ -1,9 +1,9 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 // import Header from './components/Header'
 import Card from './components/Card'
 import Description from './components/Description'
-import TravelProfile from './components/TravelProfile';
+import TravelProfile from './components/TravelProfile'
 import './App.css'
 
 class App extends Component {
@@ -21,7 +21,10 @@ class App extends Component {
   async componentDidMount() {
     fetch('https://travel-list-db.herokuapp.com/')
     .then(response => response.json())
-    .then(response => this.setState({data: response}))    
+    .then(response => this.setState({data: response}))
+    fetch('https://travel-list-db.herokuapp.com/countries')
+    .then(response2 => response2.json())
+    .then(response2 => this.setState({countryList: response2}))
     // fetch('https://pkgstore.datahub.io/core/country-list/data_json/data/8c458f2d15d9f2119654b29ede6e45b8/data_json.json')
     // .then(response => response.json())
     // .then(response => {
@@ -65,9 +68,19 @@ class App extends Component {
   }
 
   getCountry = (event) => {
+    console.log("value:", event.target.value)
     this.setState ({
       country: event.target.value
     })
+  }
+
+  getCountryList = () => {
+    let countryList = this.state.countryList
+    let mapCountryList = countryList.map(country => {
+      console.log("list here:", mapCountryList)
+      return <option>{country.name}</option>
+    })
+    return mapCountryList
   }
 
   deleteLocation = (event) => {
@@ -90,7 +103,7 @@ class App extends Component {
       <Router>
       <div className="App">
         <Route path="/" exact component={Description} />
-        <Route path="/wishlist" render={() => (<Card deleteLocation={this.deleteLocation} getCity={this.getCity} getCountry={this.getCountry} postLocation={this.postLocation} data={this.state.data} getProfile={this.getProfile} />
+        <Route path="/wishlist" render={() => (<Card getCountryList={this.getCountryList} deleteLocation={this.deleteLocation} getCity={this.getCity} getCountry={this.getCountry} postLocation={this.postLocation} data={this.state.data} getProfile={this.getProfile} />
         )}
         />
         <Route path="/travelprofile/:id" render={() => (<TravelProfile data={this.state.data} selected={this.state.selected}/>
